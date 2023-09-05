@@ -73,20 +73,22 @@
       <HintPath>..\packages\Selenium.WebDriver.4.11.0\lib\net48\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.Support.4.11.0\lib\net48\WebDriver.Support.dll</HintPath>
+      <HintPath>..\packages\Selenium.Support.4.4.0\lib\net48\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseTest.cs" />
+    <Compile Include="PageObjects\AreaSwitchPage.cs" />
+    <Compile Include="Tests\AreaTests.cs" />
+    <Compile Include="Tests\BaseTest.cs" />
     <Compile Include="PageObjects\BasePage.cs" />
     <Compile Include="PageObjects\CVPage.cs" />
     <Compile Include="PageObjects\FullSearchPage.cs" />
     <Compile Include="PageObjects\LoginPage.cs" />
     <Compile Include="PageObjects\MainPage.cs" />
     <Compile Include="PageObjects\SearchResultPage.cs" />
-    <Compile Include="CVPageTests.cs" />
+    <Compile Include="Tests\CVPageTests.cs" />
     <Compile Include="PageObjects\TopHeaderMenuPage.cs" />
-    <Compile Include="TestSearch.cs" />
+    <Compile Include="Tests\TestSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,12 +107,12 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\NUnit.3.13.3\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.3\build\NUnit.props'))" />
-    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets'))" />
     <Error Condition="!Exists('..\packages\NUnit3TestAdapter.4.5.0\build\net462\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.4.5.0\build\net462\NUnit3TestAdapter.props'))" />
     <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.116.0.5845.9600\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.116.0.5845.9600\build\Selenium.WebDriver.ChromeDriver.targets'))" />
     <Error Condition="!Exists('..\packages\AspectInjector.2.6.0\build\netstandard2.0\AspectInjector.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AspectInjector.2.6.0\build\netstandard2.0\AspectInjector.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets'))" />
   </Target>
-  <Import Project="..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets')" />
   <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.116.0.5845.9600\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.116.0.5845.9600\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <Import Project="..\packages\AspectInjector.2.6.0\build\netstandard2.0\AspectInjector.targets" Condition="Exists('..\packages\AspectInjector.2.6.0\build\netstandard2.0\AspectInjector.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.11.0\build\Selenium.WebDriver.targets')" />
 </Project>

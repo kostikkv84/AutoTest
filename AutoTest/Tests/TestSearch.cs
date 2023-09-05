@@ -57,7 +57,7 @@ namespace AutoTest
         [AllureStory("Open advance search page")]
         [AllureStep("Open advance search page")]
         [AllureTag("Regression")]
-        public void TEST_3()
+        public void TEST_OpenAdvancePage()
         {
             string textHeader = new MainPage(driver).openAdvancePage().headerText();
             Assert.AreEqual("Поиск вакансий", textHeader);

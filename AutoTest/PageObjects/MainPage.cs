@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Text;
@@ -18,6 +19,8 @@ namespace AutoTest.PageObjects
         private IWebElement searchInput => driver.FindElement(By.XPath("//input[@data-qa=\"search-input\"]"));
         private IWebElement searchBtn => driver.FindElement(By.XPath("//button[@data-qa=\"search-button\"]"));
         private IWebElement advancedSearch => driver.FindElement(By.XPath("//a[@data-qa=\"advanced-search\"]"));
+     //   private IWebElement areaSwitcher => driver.FindElement(By.XPath("//button[@data-qa=\"mainmenu_areaSwitcher\"]"));
+
 
 
         public LoginPage openLogin()
@@ -36,9 +39,13 @@ namespace AutoTest.PageObjects
 
         public FullSearchPage openAdvancePage()
         {
+        
+
             advancedSearch.Click();
             return new FullSearchPage(driver);
-        } 
+        }
+
+
 
     }
 }

@@ -3,6 +3,7 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,9 @@ namespace AutoTest
             options.AddArguments("--ignore-ssl-errors");
             driver = new ChromeDriver(igWorkDir, options);
             driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            //   driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
+
         }
 
         [OneTimeTearDown] //вызывается после завершения всех тестов
@@ -52,6 +56,8 @@ namespace AutoTest
                 Console.WriteLine("some text");
             }
         }
+
+
 
     }
 }
